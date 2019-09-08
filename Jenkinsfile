@@ -3,6 +3,7 @@ node(){
         git 'https://github.com/lokeshkamalay/java-tomcat-maven-example.git'
     }
     stage('Build'){
+        sh 'mvn clean install'
         sh '/tmp/maven3.5.4/bin/mvn package'
     }
     stage('Prepare an Image'){
