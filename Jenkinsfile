@@ -3,7 +3,7 @@ node(){
         git 'https://github.com/lokeshkamalay/java-tomcat-maven-example.git'
     }
     stage('Build'){
-        sh '/tmp/apache-maven-3.5.4/bin/mvn package'
+        sh '/tmp/maven3.5.4/bin/mvn package'
     }
     stage('Prepare an Image'){
         sh 'docker build -t mythri -f Dockerfile .'
